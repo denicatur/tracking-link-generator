@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Tautan Pelacakan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f5ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        input[type="url"] {
+            width: 70%;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .gps-icon {
+            width: 150px; /* Ukuran gambar GPS yang lebih besar */
+            height: auto; /* Menjaga proporsi gambar */
+            margin-bottom: 20px; /* Jarak antara gambar dan form */
+            border-radius: 10px; /* Menambahkan sudut melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+            transition: transform 0.3s; /* Efek transisi saat hover */
+        }
+        .gps-icon:hover {
+            transform: scale(1.1); /* Membesarkan gambar saat hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="gps.png" alt="GPS Icon" class="gps-icon">
+        <h1>Create Link To Play</h1>
+        <form action="create.php" method="POST" style="display: flex; justify-content: center; align-items: center;">
+            <input type="url" name="original_url" placeholder="Masukkan URL" required>
+            <button type="submit">Buat Link</button>
+        </form>
+    </div>
+</body>
+</html>
